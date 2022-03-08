@@ -23,11 +23,11 @@ fun main(args: Array<String>) {
     try {
         val nome = Cliente("Nancy", "Rua Elm, 1428", "(11)95678-1234")
 
-    }catch (e: Exception){
+    } catch (e: Exception) {
         println(e.message)
     }
 
-    while (true){
+    while (true) {
 
         println("\nMenu de ações")
         println("1 - Adicione itens na compra")
@@ -49,17 +49,26 @@ fun main(args: Array<String>) {
             }
         }
 
-        when(opcao){
+        when (opcao) {
 
-            1 ->
-            2 ->
-            3 ->
+            1 -> {
+                println("Digite item a ser adicionado: ")
+                val item = readLine()!!
+                Cliente.adicionar(item)
+            }
+            2 -> {
+                println("Digite item a ser removido: ")
+                val item = readLine()!!
+                Cliente.remover(item)
+            }
+            3 -> Cliente.listaritens()
 
+            else -> break
         }
 
-
+    }catch(e: Exception) {
+        println(e.message)
     }
-
 
 }
 

@@ -1,18 +1,18 @@
-class Cliente constructor(private val nome: String) {
+class Cliente consructor (val nome: String) {
 
     private var endereco = ""
     private var telefone = ""
 
-    private var listaDeCompras = mutableListOf<String>()
+    private val listaDeCompras = mutableListOf<String>()
 
-    constructor(nome: String, endereco: String): this(nome){
+    constructor(nome: String, endereco: String) : this(nome) {
         this.endereco = endereco
     }
 
     constructor(
         nome: String, endereco: String, telefone: String
-    ) : this(nome, endereco){
-        this. telefone = telefone
+    ) : this(nome, endereco) {
+        this.telefone = telefone
     }
 
     init{
@@ -49,11 +49,5 @@ class Cliente constructor(private val nome: String) {
             println(it)
         }
     }
-
-
-
-
-
-
 
 }
