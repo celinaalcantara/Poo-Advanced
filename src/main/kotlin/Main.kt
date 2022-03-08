@@ -1,3 +1,5 @@
+import encap.Cliente
+
 fun main(args: Array<String>) {
     /*
     Cria uma Classe Cliente, contendo os atributos encapsulados, um construtor padrão e pelo
@@ -11,6 +13,7 @@ fun main(args: Array<String>) {
     */
 
 
+
     println("Digite o nome: ")
     val nome = readLine()!!
 
@@ -21,13 +24,15 @@ fun main(args: Array<String>) {
     val telefone = readLine()!!
 
     try {
-        val nome = Cliente("Nancy", "Rua Elm, 1428", "(11)95678-1234")
+        val compra = Cliente
 
     } catch (e: Exception) {
         println(e.message)
     }
 
     while (true) {
+        val compra = Cliente
+        var opcao = 0
 
         println("\nMenu de ações")
         println("1 - Adicione itens na compra")
@@ -35,8 +40,6 @@ fun main(args: Array<String>) {
         println("3 - Lista de itens da compra")
         println("Para sair, digite S")
         println("\nSelecione uma opção: ")
-
-        var opcao = 0
 
         while (true) {
             println("\nSelecione uma opção")
@@ -54,19 +57,19 @@ fun main(args: Array<String>) {
             1 -> {
                 println("Digite item a ser adicionado: ")
                 val item = readLine()!!
-                Cliente.adicionar(item)
+                compra.adicionar(item)
             }
             2 -> {
                 println("Digite item a ser removido: ")
                 val item = readLine()!!
-                Cliente.remover(item)
+                compra.remover(item)
             }
-            3 -> Cliente.listaritens()
+            3 -> compra.listaritens()
 
             else -> break
         }
 
-    }catch(e: Exception) {
+    } catch(e: Exception) {
         println(e.message)
     }
 

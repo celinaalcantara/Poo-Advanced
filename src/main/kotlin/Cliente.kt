@@ -1,4 +1,5 @@
-class Cliente consructor (val nome: String) {
+package encap
+class Cliente constructor(val nome: String) {
 
     private var endereco = ""
     private var telefone = ""
